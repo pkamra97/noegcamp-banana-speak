@@ -10,7 +10,7 @@
 var btntranslate=document.querySelector("#btn-trans")
 var txtInput=document.querySelector("#txt-input")
 
-console.log(txtinput)
+console.log(txtInput)
 
 // console.log(btntranslate)
 function clickEventHandler(){

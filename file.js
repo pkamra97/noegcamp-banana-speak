@@ -8,12 +8,19 @@
 // alert(welcomeMsg)
 
 var btntranslate=document.querySelector("#btn-trans")
+var txtInput=document.querySelector("#txt-input")
+
+console.log(txtinput)
 
 // console.log(btntranslate)
+function clickEventHandler(){
 
-btntranslate.addEventListener("click", function clickEventHandler(){
+    console.log("clicked");
 
-    console.log("clicked")
+    // this below line is used for reading input from user via document
+    console.log("input",txtInput.value);
 
-})
+}
+
+btntranslate.addEventListener("click", clickEventHandler)
 

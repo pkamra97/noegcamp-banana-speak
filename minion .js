@@ -1,25 +1,10 @@
-// // console.log("script is working from a diff file")
-// // input 
-// var user=prompt("give me your user name")
-// // process
-// var welcomeMsg="this script works"+user
-// // output
-
-// alert(welcomeMsg)
 
 var btntranslate=document.querySelector("#btn-trans")
 var txtInput=document.querySelector("#txt-input")
 var outputDiv=document.querySelector("#output")
 
-// outputDiv.innerText="prateek kamra "
-// above line will display the text in output box 
 
-
-// console.log(outputDiv)
-// console.log(txtInput)
-
-// console.log(btntranslate)
- var serverURL= "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
+ var serverURL= "https://api.funtranslations.com/translate/"
 function getTranslation(text)
 {
     return serverURL+"?"+"text"+text
@@ -35,6 +20,7 @@ function clickEventHandler()
     fetch(getTranslation(inputText))
     .then(response=>response.json())
     // .then(json => console.log(json.contents.translated))
+    // to show it on outputdiv
     .then(json=> 
         {
             var translatedText=json.contents.translated;
@@ -42,16 +28,6 @@ function clickEventHandler()
         })
     .catch(errorhandler)
 }
-// function clickEventHandler(){
-
-//     outputDiv.innerText="fshbcsjacluw " + txtInput.value;
-
-//     // console.log("clicked");
-
-//     // // this below line is used for reading input from user via document
-//     // console.log("input",txtInput.value);
-
-// }
 
 btntranslate.addEventListener("click", clickEventHandler)
 
